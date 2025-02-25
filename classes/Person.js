@@ -21,7 +21,6 @@ class Person {
         this.location[1] += deltaY;
     }
 
-
     
 }
 
