@@ -5,7 +5,6 @@ const NPC = require('./classes/NPC')
 function main(){
     console.log("This is the main function")
 
-
     console.log("******* Person *******")
 
     const person1 = new Person("Bertha", "Thief")
@@ -40,6 +39,21 @@ function main(){
     // console.log("*** will throw error ***")
     // const npcError = new NPC("Shelly", "Fairy", [-1,-1])
     // console.log(npcError)
+
+    console.log("******* health *******")
+    console.log(person1.getHealth());
+    console.log(person1.getHealthString());
+    person1.increaseHealth(5); // should remain the same
+    console.log(person1.getHealthString());
+    person1.decreaseHealth(5);
+    console.log(person1.getHealthString());
+    person1.increaseHealth(2);
+    console.log(person1.getHealthString());
+
+    //console.log(person1.#health) // can't do this
+
+    // new Person(12345, "Warrior") // will not be valid since name is a number
+    // person2.setName(709)
 }
 
 main()
