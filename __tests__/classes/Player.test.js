@@ -23,10 +23,13 @@ describe("Player", () => {
 
     // make sure we can't add the same item twice
     it("should NOT add an item to the inventory if it is already present", () => {
+        // Arrange
         const player = new Player("Sword", "John", "Human", "Forest");
         const item = new Item("Potion", 5);
+        // Act
         player.inventory.push(item);
         player.addItem(item); // should not add item
+        // Assert
         expect(player.inventory).toHaveLength(1);
         expect(console.log).toHaveBeenCalledWith(`${item.name} already in inventory.`) // need to use mocked console.log call
     })
